@@ -486,8 +486,9 @@ function Contact() {
       setStatus({ t:'ok', m:"✅ Message sent! I'll reply within 24 hours." });
       setForm({ name:'', email:'', subject:'', message:'' });
     } catch (err) {
-      console.error(err);
-      setStatus({ t:'err', m:'❌ Failed to send. Email me at saiphapale7272@gmail.com' });
+      console.error('EmailJS send error:', err);
+      const errDetail = err?.status ? ` (Error ${err.status}: ${err.text || 'Failed'})` : '';
+      setStatus({ t:'err', m: `❌ Failed to send${errDetail}. Email me at saiphapale7272@gmail.com` });
     }
     setLoading(false);
   };
