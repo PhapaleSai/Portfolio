@@ -3,6 +3,24 @@ import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import emailjs from '@emailjs/browser';
 
+/* ─── Brand Icons ─── */
+function IconGitHub({ className }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+      <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.75 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .3.21.66.8.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/>
+    </svg>
+  );
+}
+function IconAWS({ className }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+      <path d="M6.76 10.4c0 .3.03.53.09.7.06.16.15.35.28.55.05.07.07.14.07.2 0 .09-.05.17-.16.26l-.53.35a.4.4 0 0 1-.22.07c-.08 0-.17-.04-.25-.12a2.6 2.6 0 0 1-.3-.4 6.3 6.3 0 0 1-.26-.5c-.65.77-1.47 1.15-2.45 1.15-.7 0-1.26-.2-1.66-.6-.4-.4-.6-.94-.6-1.6 0-.72.25-1.3.77-1.74.51-.44 1.19-.66 2.06-.66.28 0 .58.02.9.07.3.04.63.11.97.19v-.62c0-.63-.13-1.06-.39-1.32-.27-.25-.72-.37-1.36-.37-.29 0-.59.03-.9.1-.31.07-.61.16-.9.28a2.4 2.4 0 0 1-.3.11.5.5 0 0 1-.13.02c-.12 0-.18-.09-.18-.27v-.42c0-.14.02-.24.06-.3a.65.65 0 0 1 .24-.2c.29-.15.65-.28 1.06-.38a5 5 0 0 1 1.31-.16c1 0 1.73.23 2.2.68.46.46.7 1.15.7 2.08v2.74Zm-3.38 1.27c.27 0 .55-.05.85-.15.3-.1.56-.29.79-.54.13-.16.23-.34.28-.54.05-.2.09-.44.09-.72v-.35a7 7 0 0 0-.78-.15 6.3 6.3 0 0 0-.8-.05c-.57 0-.98.11-1.27.34-.28.22-.42.54-.42.97 0 .4.1.7.31.9.2.2.5.3.95.3Zm6.7.9c-.16 0-.27-.03-.34-.09-.07-.05-.13-.18-.18-.35L7.71 5.65a1.6 1.6 0 0 1-.08-.36c0-.14.07-.22.21-.22h.87c.17 0 .29.03.35.09.07.06.12.18.17.35l1.35 5.32 1.25-5.32c.04-.18.09-.29.16-.35.07-.06.2-.09.36-.09h.71c.17 0 .29.03.36.09.07.06.13.18.16.35l1.27 5.38 1.39-5.38c.05-.18.11-.29.17-.35.07-.06.19-.09.35-.09h.83c.14 0 .22.08.22.22a.9.9 0 0 1-.02.14 1.3 1.3 0 0 1-.06.22l-1.93 6.48c-.05.18-.11.29-.18.35a.53.53 0 0 1-.34.09h-.76c-.17 0-.29-.03-.36-.1-.07-.06-.13-.18-.16-.36l-1.24-5.2-1.24 5.19c-.04.18-.09.29-.16.36-.07.07-.2.1-.36.1h-.76Zm10.72.22a5.5 5.5 0 0 1-1.28-.15c-.4-.1-.72-.21-.94-.34-.14-.08-.23-.16-.27-.24a.6.6 0 0 1-.05-.24v-.44c0-.18.07-.27.2-.27a.5.5 0 0 1 .16.03c.06.02.14.06.24.1.32.14.68.25 1.05.32.38.08.75.11 1.13.11.6 0 1.06-.1 1.38-.31.32-.21.49-.51.49-.9 0-.26-.08-.48-.25-.66-.17-.18-.48-.34-.93-.5l-1.33-.42c-.67-.21-1.17-.53-1.48-.94a2.2 2.2 0 0 1-.46-1.35c0-.39.08-.73.25-1.03.17-.3.4-.56.68-.76.29-.21.6-.37.98-.48.37-.11.76-.16 1.17-.16.2 0 .42.01.63.04.22.03.42.07.62.11.19.05.37.1.53.16.17.06.3.12.4.18a.8.8 0 0 1 .28.24.5.5 0 0 1 .08.3v.4c0 .19-.07.28-.2.28a.9.9 0 0 1-.33-.11 3.9 3.9 0 0 0-1.67-.34c-.55 0-.98.09-1.28.28-.3.19-.45.47-.45.86 0 .26.09.49.27.67.18.18.52.36 1 .53l1.3.41c.65.21 1.14.51 1.43.89.29.38.43.82.43 1.3 0 .4-.08.76-.25 1.08-.17.32-.4.6-.7.82-.3.23-.65.4-1.06.52-.43.13-.87.19-1.36.19Z"/>
+      <path d="M21.6 16.6c-2.6 1.93-6.38 2.95-9.63 2.95-4.56 0-8.66-1.68-11.77-4.49-.24-.22-.02-.52.27-.35 3.36 1.95 7.5 3.13 11.79 3.13 2.89 0 6.07-.6 9-1.84.44-.19.81.29.34.6Z"/>
+      <path d="M22.72 15.34c-.33-.43-2.2-.2-3.04-.1-.25.03-.29-.19-.06-.35 1.49-1.04 3.93-.74 4.21-.39.28.35-.08 2.8-1.47 3.97-.21.18-.42.08-.32-.15.32-.79 1.03-2.56.68-2.98Z"/>
+    </svg>
+  );
+}
+
 /* ─── Hero Particles (canvas) ─── */
 function HeroParticles() {
   const ref = useRef(null);
@@ -94,6 +112,77 @@ function ScrollProgress() {
     return () => window.removeEventListener('scroll', fn);
   }, []);
   return <div className="scroll-bar" style={{ width: `${pct}%` }} />;
+}
+
+/* ─── Cursor Glow ─── */
+function CursorGlow() {
+  const ref = useRef(null);
+  useEffect(() => {
+    const move = e => {
+      if (!ref.current) return;
+      ref.current.style.setProperty('--mx', `${e.clientX}px`);
+      ref.current.style.setProperty('--my', `${e.clientY}px`);
+    };
+    window.addEventListener('mousemove', move);
+    return () => window.removeEventListener('mousemove', move);
+  }, []);
+  return <div className="cursor-glow" ref={ref} />;
+}
+
+/* ─── Card spotlight (mouse-tracked glow) ─── */
+function spotlightMove(e) {
+  const r = e.currentTarget.getBoundingClientRect();
+  e.currentTarget.style.setProperty('--sx', `${e.clientX - r.left}px`);
+  e.currentTarget.style.setProperty('--sy', `${e.clientY - r.top}px`);
+}
+
+/* ─── Hero Photo (3D tilt + orbit + glow) ─── */
+function HeroPhoto() {
+  const ref = useRef(null);
+  const [tilt, setTilt] = useState({ x: 0, y: 0 });
+
+  const onMove = e => {
+    const el = ref.current;
+    if (!el) return;
+    const r = el.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width - 0.5;
+    const py = (e.clientY - r.top) / r.height - 0.5;
+    setTilt({ x: py * -16, y: px * 18 });
+  };
+  const onLeave = () => setTilt({ x: 0, y: 0 });
+
+  return (
+    <div
+      className="hero-photo"
+      ref={ref}
+      onMouseMove={onMove}
+      onMouseLeave={onLeave}
+      style={{ '--rx': `${tilt.x}deg`, '--ry': `${tilt.y}deg` }}
+    >
+      <div className="pulse-ring pr1" />
+      <div className="pulse-ring pr2" />
+      <div className="photo-orbit">
+        <span className="orbit-dot od1" />
+        <span className="orbit-dot od2" />
+        <span className="orbit-dot od3" />
+      </div>
+      <div className="photo-tilt">
+        <div className="photo-ring">
+          <div className="photo-inner">
+            <Image src="/profile.jpg" alt="Sai Rajesh Phapale" width={320} height={320} priority />
+            <div className="photo-shine" />
+          </div>
+        </div>
+      </div>
+      <div className="photo-badge">
+        <span className="dot2" />
+        Available for Work
+      </div>
+      <div className="ftag t1">Python 🐍</div>
+      <div className="ftag t2"><IconAWS className="ftag-icon" /> AWS</div>
+      <div className="ftag t3">FastAPI ⚡</div>
+    </div>
+  );
 }
 
 /* ─── Back to Top ─── */
@@ -211,20 +300,7 @@ function Hero() {
             ))}
           </div>
         </div>
-        <div className="hero-photo">
-          <div className="photo-ring">
-            <div className="photo-inner">
-              <Image src="/profile.jpg" alt="Sai Rajesh Phapale" width={320} height={320} priority />
-            </div>
-          </div>
-          <div className="photo-badge">
-            <span className="dot2" />
-            Available for Work
-          </div>
-          <div className="ftag t1">Python 🐍</div>
-          <div className="ftag t2">AWS ☁️</div>
-          <div className="ftag t3">FastAPI ⚡</div>
-        </div>
+        <HeroPhoto />
       </div>
     </section>
   );
@@ -266,7 +342,7 @@ function About() {
             { ico:'🎓', l:'Education', v:'M.Sc Computer Science (Pursuing)' },
             { ico:'💼', l:'Role',      v:'Associate Software Developer @ Coditation' },
             { ico:'🌐', l:'LinkedIn',  v:<a href="https://linkedin.com/in/sai-phapale" target="_blank" rel="noreferrer">linkedin.com/in/sai-phapale</a> },
-            { ico:'🐙', l:'GitHub',    v:<a href="https://github.com/PhapaleSai" target="_blank" rel="noreferrer">github.com/PhapaleSai</a> },
+            { ico:<IconGitHub className="info-icon" />, l:'GitHub', v:<a href="https://github.com/PhapaleSai" target="_blank" rel="noreferrer">github.com/PhapaleSai</a> },
           ].map(r => (
             <div className="info-row" key={r.l}>
               <div className="info-ico">{r.ico}</div>
@@ -285,7 +361,7 @@ const SKILLS = [
   { ico:'🖥️', name:'Backend',                     tags:['Django','Django REST Framework','FastAPI'] },
   { ico:'🌐', name:'Frontend',                    tags:['HTML','CSS','JavaScript','React','Tailwind CSS'] },
   { ico:'🗄️', name:'Databases',                   tags:['PostgreSQL','MySQL','MongoDB'] },
-  { ico:'☁️', name:'Cloud (AWS)',                  tags:['EC2','S3','RDS','VPC','IAM','Route 53','CloudFormation','CloudWatch'] },
+  { ico:<IconAWS className="sk-ico-svg" />, name:'Cloud (AWS)', tags:['EC2','S3','RDS','VPC','IAM','Route 53','CloudFormation','CloudWatch'] },
   { ico:'🌩️', name:'Other Cloud',                  tags:['GCP (Basic)','Azure (Basic)'] },
   { ico:'⚙️', name:'DevOps & Deployment',          tags:['GitLab','Git','GitHub','Jenkins','Docker','Kubernetes'] },
   { ico:'🧱', name:'Infrastructure as Code',       tags:['Terraform','Ansible'] },
@@ -305,7 +381,7 @@ function Skills() {
       </div>
       <div className="max skills-grid">
         {SKILLS.map((c, i) => (
-          <div className="g-card sk-card reveal" key={i} style={{ '--reveal-delay': `${i * 0.07}s` }}>
+          <div className="g-card sk-card reveal" key={i} style={{ '--reveal-delay': `${i * 0.07}s` }} onMouseMove={spotlightMove}>
             <div className="sk-head">
               <span className="sk-ico">{c.ico}</span>
               <span className="sk-name">{c.name}</span>
@@ -362,7 +438,7 @@ function Experience() {
         ].map((e, i) => (
           <div className="tl-item reveal" key={i}>
             <div className="tl-dot">{e.ico}</div>
-            <div className="tl-body g-card">
+            <div className="tl-body g-card" onMouseMove={spotlightMove}>
               <div className="tl-top">
                 <span className="tl-role">{e.role}</span>
                 <span className="tl-period">{e.period}</span>
@@ -443,6 +519,7 @@ function Projects() {
             className={`proj-card proj-ac-${p.ac}${p.featured ? ' proj-featured' : ''} reveal`}
             key={i}
             style={{ '--reveal-delay': `${i * 0.1}s` }}
+            onMouseMove={spotlightMove}
           >
             <div className="proj-top-bar" />
             <div className="proj-ico">{p.ico}</div>
@@ -456,7 +533,7 @@ function Projects() {
               <div className="proj-links">
                 {p.links.map(lk => (
                   <a href={lk.href} className="proj-link" key={lk.l} target="_blank" rel="noreferrer">
-                    {lk.l === 'GitHub' ? '🐙' : '🔗'} {lk.l}
+                    {lk.l === 'GitHub' ? <IconGitHub className="link-icon" /> : '🔗'} {lk.l}
                   </a>
                 ))}
               </div>
@@ -479,7 +556,7 @@ function Education() {
         <p className="s-sub">P.V.G College of Science, Pune</p>
       </div>
       <div className="edu-grid">
-        <div className="g-card edu-card reveal">
+        <div onMouseMove={spotlightMove} className="g-card edu-card reveal">
           <div className="edu-badge">Pursuing</div>
           <div className="edu-ico">🎓</div>
           <div className="edu-deg">M.Sc. Computer Science</div>
@@ -487,7 +564,7 @@ function Education() {
           <div className="edu-yr">2024 – 2026</div>
           <div className="edu-gpa">⭐ CGPA: 8.90</div>
         </div>
-        <div className="g-card edu-card reveal" style={{ '--reveal-delay': '.1s' }}>
+        <div onMouseMove={spotlightMove} className="g-card edu-card reveal" style={{ '--reveal-delay': '.1s' }}>
           <div className="edu-ico">🏛️</div>
           <div className="edu-deg">B.Sc. Computer Science</div>
           <div className="edu-school">P.V.G College of Science, Pune</div>
@@ -551,7 +628,7 @@ function Contact() {
               { ico:'📞', l:'Phone',    v:'+91 8432737272',             href:'tel:+918432737272' },
               { ico:'📍', l:'Location', v:'Pune, Maharashtra, India',   href:'#' },
               { ico:'💼', l:'LinkedIn', v:'Connect on LinkedIn',        href:'https://linkedin.com/in/sai-phapale' },
-              { ico:'🐙', l:'GitHub',   v:'PhapaleSai on GitHub',       href:'https://github.com/PhapaleSai' },
+              { ico:<IconGitHub className="c-link-svg" />, l:'GitHub', v:'PhapaleSai on GitHub', href:'https://github.com/PhapaleSai' },
             ].map(lk => (
               <a href={lk.href} className="c-link" key={lk.l}
                 target={lk.href.startsWith('http') ? '_blank' : '_self'} rel="noreferrer">
@@ -561,7 +638,7 @@ function Contact() {
             ))}
           </div>
         </div>
-        <div className="g-card c-form reveal" style={{ '--reveal-delay': '.1s' }}>
+        <div className="g-card c-form reveal" style={{ '--reveal-delay': '.1s' }} onMouseMove={spotlightMove}>
           <div className="f-title">Send Me a Message 🚀</div>
           <div className="f-sub">Fill the form — I reply within 24 hours.</div>
           <form onSubmit={submit}>
@@ -601,7 +678,7 @@ function Footer() {
       <div className="soc-bar">
         {[
           ['💼','https://linkedin.com/in/sai-phapale','LinkedIn'],
-          ['🐙','https://github.com/PhapaleSai','GitHub'],
+          [<IconGitHub className="soc-svg" key="gh" />,'https://github.com/PhapaleSai','GitHub'],
           ['📧','mailto:saiphapale7272@gmail.com','Email'],
           ['📞','tel:+918432737272','Phone'],
         ].map(([ico, href, lbl]) => (
@@ -619,6 +696,7 @@ export default function Home() {
   useReveal();
   return (
     <>
+      <CursorGlow />
       <Navbar />
       <main>
         <Hero />
