@@ -321,7 +321,7 @@ body::before{
   100%{transform:translateX(160%);}
 }
 .photo-badge{
-  position:absolute;bottom:18px;right:-20px;
+  position:absolute;bottom:18px;right:-20px;z-index:3;
   padding:.55rem 1.1rem;border-radius:6px;
   background:rgba(0,0,0,.9);
   border:1px solid rgba(139,92,246,.25);
