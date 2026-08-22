@@ -159,28 +159,32 @@ function HeroPhoto() {
       onMouseLeave={onLeave}
       style={{ '--rx': `${tilt.x}deg`, '--ry': `${tilt.y}deg` }}
     >
-      <div className="pulse-ring pr1" />
-      <div className="pulse-ring pr2" />
-      <div className="photo-orbit">
-        <span className="orbit-dot od1" />
-        <span className="orbit-dot od2" />
-        <span className="orbit-dot od3" />
-      </div>
-      <div className="photo-tilt">
-        <div className="photo-ring">
-          <div className="photo-inner">
-            <Image src="/profile.jpg" alt="Sai Rajesh Phapale" width={320} height={320} priority />
-            <div className="photo-shine" />
+      <div className="photo-stage">
+        <div className="pulse-ring pr1" />
+        <div className="pulse-ring pr2" />
+        <div className="photo-orbit">
+          <span className="orbit-dot od1" />
+          <span className="orbit-dot od2" />
+          <span className="orbit-dot od3" />
+        </div>
+        <div className="photo-tilt">
+          <div className="photo-ring">
+            <div className="photo-inner">
+              <Image src="/profile.jpg" alt="Sai Rajesh Phapale" width={320} height={320} priority />
+              <div className="photo-shine" />
+            </div>
           </div>
         </div>
+        <div className="photo-badge">
+          <span className="dot2" />
+          Available for Work
+        </div>
+        <div className="ftag-row">
+          <div className="ftag t1">Python 🐍</div>
+          <div className="ftag t2"><IconAWS className="ftag-icon" /> AWS</div>
+          <div className="ftag t3">FastAPI ⚡</div>
+        </div>
       </div>
-      <div className="photo-badge">
-        <span className="dot2" />
-        Available for Work
-      </div>
-      <div className="ftag t1">Python 🐍</div>
-      <div className="ftag t2"><IconAWS className="ftag-icon" /> AWS</div>
-      <div className="ftag t3">FastAPI ⚡</div>
     </div>
   );
 }
