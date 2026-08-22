@@ -187,11 +187,11 @@ function Hero() {
             <span className="grad">Sai Rajesh<br />Phapale</span>
           </h1>
           <p className="hero-role">
-            <Typewriter words={['Full Stack Developer','DevOps Engineer','Cloud Architect','Python Developer']} />
+            <Typewriter words={['Associate Software Developer','Python Backend Developer','AWS Cloud Engineer','AI/LLM Application Builder']} />
           </p>
           <p className="hero-desc">
-            Building responsive web apps and scalable cloud infrastructure.
-            Passionate about clean code, automated pipelines, and elegant UI.
+            Building backend APIs and AI-powered applications with Python, Django & FastAPI.
+            Passionate about clean architecture, cloud infrastructure, and shipping fast.
           </p>
           <div className="hero-btns">
             <a href="#projects" className="btn-primary">View My Work ↓</a>
@@ -199,10 +199,10 @@ function Hero() {
           </div>
           <div className="hero-stats">
             {[
-              { t:'9.0', l:'CGPA',       s:'' },
-              { t:'4',   l:'Projects',   s:'+' },
-              { t:'2',   l:'Internships',s:'+' },
-              { t:'10',  l:'Skills',     s:'+' },
+              { t:'8.9', l:'CGPA (MSc)', s:'' },
+              { t:'6',   l:'Projects',   s:'+' },
+              { t:'3',   l:'Roles',      s:'+' },
+              { t:'12',  l:'Skills',     s:'+' },
             ].map(({ t, l, s }) => (
               <div className="h-stat" key={l}>
                 <div className="h-stat-n"><Counter target={t} />{s}</div>
@@ -221,9 +221,9 @@ function Hero() {
             <span className="dot2" />
             Available for Work
           </div>
-          <div className="ftag t1">React ⚛️</div>
+          <div className="ftag t1">Python 🐍</div>
           <div className="ftag t2">AWS ☁️</div>
-          <div className="ftag t3">Docker 🐳</div>
+          <div className="ftag t3">FastAPI ⚡</div>
         </div>
       </div>
     </section>
@@ -242,14 +242,14 @@ function About() {
       </div>
       <div className="max about-grid">
         <div className="about-text reveal">
-          <p>I&apos;m a results-oriented developer with hands-on experience in both <strong>web development</strong> and <strong>DevOps engineering</strong>. I love crafting clean, responsive interfaces and automating infrastructure at scale.</p>
-          <p>With a strong academic background (CGPA 9.0) and real-world internship experience at Hisan Labs and Tayan Solutions, I bring end-to-end product thinking from frontend to cloud.</p>
+          <p>I&apos;m an <strong>Associate Software Developer</strong> at Coditation Systems, working primarily on <strong>Python backend development</strong>, PostgreSQL, AWS, and application deployment. I enjoy building backend APIs and AI-powered applications with Django and FastAPI, with additional experience in React on the frontend.</p>
+          <p>I&apos;ve worked on AI-powered applications, cloud infrastructure, CI/CD, and Terraform-based solutions — from an AI Terraform generator to LLM-driven chat interfaces — and bring end-to-end product thinking from database to deployment.</p>
           <div className="a-stats">
             {[
               { t:'9.0',  l:'CGPA (BSc)',  s:'' },
-              { t:'8.73', l:'CGPA (MSc)',  s:'' },
-              { t:'4',    l:'Projects',    s:'+' },
-              { t:'10',   l:'Tech Skills', s:'+' },
+              { t:'8.9',  l:'CGPA (MSc)',  s:'' },
+              { t:'6',    l:'Projects',    s:'+' },
+              { t:'12',   l:'Tech Skills', s:'+' },
             ].map(({ t, l, s }) => (
               <div className="a-stat" key={l}>
                 <div className="a-stat-n"><Counter target={t} />{s}</div>
@@ -264,9 +264,9 @@ function About() {
             { ico:'📧', l:'Email',     v:<a href="mailto:saiphapale7272@gmail.com">saiphapale7272@gmail.com</a> },
             { ico:'📞', l:'Phone',     v:'+91 8432737272' },
             { ico:'🎓', l:'Education', v:'M.Sc Computer Science (Pursuing)' },
-            { ico:'💼', l:'Status',    v:'Open to Opportunities' },
+            { ico:'💼', l:'Role',      v:'Associate Software Developer @ Coditation' },
             { ico:'🌐', l:'LinkedIn',  v:<a href="https://linkedin.com/in/sai-phapale" target="_blank" rel="noreferrer">linkedin.com/in/sai-phapale</a> },
-            { ico:'🐙', l:'GitHub',    v:<a href="https://github.com/Dev-Sai-Ops" target="_blank" rel="noreferrer">github.com/Dev-Sai-Ops</a> },
+            { ico:'🐙', l:'GitHub',    v:<a href="https://github.com/PhapaleSai" target="_blank" rel="noreferrer">github.com/PhapaleSai</a> },
           ].map(r => (
             <div className="info-row" key={r.l}>
               <div className="info-ico">{r.ico}</div>
@@ -281,14 +281,17 @@ function About() {
 
 /* ─── SKILLS ─── */
 const SKILLS = [
-  { ico:'🌐', name:'Web Technologies',           tags:['HTML5','CSS3','JavaScript','Django','Bootstrap'] },
-  { ico:'☁️', name:'Cloud Platforms',             tags:['AWS EC2','S3','RDS','VPC','IAM','Route 53','CloudFormation','CloudWatch','GCP','Azure'] },
-  { ico:'🐳', name:'Containers & Orchestration', tags:['Docker','Kubernetes','AWS EKS'] },
-  { ico:'⚙️', name:'CI/CD & Automation',          tags:['Jenkins','Ansible','Terraform'] },
-  { ico:'📊', name:'Monitoring',                  tags:['Prometheus','Grafana'] },
-  { ico:'🗄️', name:'Databases',                   tags:['MySQL','MongoDB'] },
-  { ico:'💻', name:'Programming',                 tags:['Python','C','Shell Scripting'] },
-  { ico:'🔧', name:'Version Control & OS',        tags:['Git','GitHub','GitLab','Linux Ubuntu','Linux CentOS'] },
+  { ico:'💻', name:'Programming',                 tags:['Python','C'] },
+  { ico:'🖥️', name:'Backend',                     tags:['Django','Django REST Framework','FastAPI'] },
+  { ico:'🌐', name:'Frontend',                    tags:['HTML','CSS','JavaScript','React','Tailwind CSS'] },
+  { ico:'🗄️', name:'Databases',                   tags:['PostgreSQL','MySQL','MongoDB'] },
+  { ico:'☁️', name:'Cloud (AWS)',                  tags:['EC2','S3','RDS','VPC','IAM','Route 53','CloudFormation','CloudWatch'] },
+  { ico:'🌩️', name:'Other Cloud',                  tags:['GCP (Basic)','Azure (Basic)'] },
+  { ico:'⚙️', name:'DevOps & Deployment',          tags:['GitLab','Git','GitHub','Jenkins','Docker','Kubernetes'] },
+  { ico:'🧱', name:'Infrastructure as Code',       tags:['Terraform','Ansible'] },
+  { ico:'📊', name:'Monitoring',                   tags:['Prometheus','Grafana'] },
+  { ico:'🤖', name:'AI / LLM',                     tags:['OpenAI','Groq','Claude','LLM Apps','AI Agents'] },
+  { ico:'🐧', name:'Operating Systems',            tags:['Ubuntu','CentOS'] },
 ];
 
 function Skills() {
@@ -330,21 +333,30 @@ function Experience() {
       <div className="timeline">
         {[
           {
-            ico:'🖥️', role:'On-Job Training — Web Developer',
-            period:'Mar 2025 – May 2025', co:'Tayan Solutions · Pune',
+            ico:'🚀', role:'Associate Software Developer',
+            period:'Jul 2026 – Present', co:'Coditation Systems Pvt. Ltd. · Pune',
             pts:[
-              'Built responsive web pages (Home, About, Registration) with HTML, CSS & JavaScript.',
-              'Contributed to eCommerce project QuickPick with cart, product browsing & checkout.',
-              'Maintained version control using Git & GitHub for collaborative workflows.',
+              'Work primarily on Python backend development, PostgreSQL, AWS, and application deployment.',
+              'Manage development and deployment workflows using GitLab, AWS, and related DevOps tools.',
+              'Contribute to backend APIs, database tasks, and frontend development when required.',
             ],
           },
           {
-            ico:'⚙️', role:'DevOps Engineer Intern',
-            period:'Oct 2023 – Aug 2024', co:'Hisan Labs Pvt Ltd · Pune',
+            ico:'🖥️', role:'Software Developer Intern',
+            period:'Jan 2026 – Jun 2026', co:'Coditation Systems Pvt. Ltd. · Pune',
             pts:[
-              'Designed CI/CD pipelines with Jenkins and automated provisioning using Ansible & Terraform.',
-              'Deployed containerised apps on AWS EKS using Docker for scalable production.',
-              'Implemented Prometheus & Grafana monitoring for improved reliability and alerting.',
+              'Worked on Python backend and full-stack development, including APIs, databases, and deployment workflows.',
+              'Contributed to TerraSketch, DataBridge AI, and a COBOL-to-Java modernization project.',
+              'Worked with Git/GitLab, AWS, and DevOps practices in development and deployment activities.',
+            ],
+          },
+          {
+            ico:'🌱', role:'On-Job Training — Web Developer',
+            period:'Mar 2025 – May 2025', co:'Tayan Solutions · Pune',
+            pts:[
+              'Developed responsive web pages using HTML, CSS, and JavaScript.',
+              'Contributed to the QuickPick e-commerce project with cart, product browsing & checkout.',
+              'Used Git/GitHub for version control and collaborative workflows.',
             ],
           },
         ].map((e, i) => (
@@ -368,32 +380,51 @@ function Experience() {
 /* ─── PROJECTS ─── */
 const PROJECTS = [
   {
-    ico:'👥', num:'01',
-    name:'Employment Management System',
-    desc:'Team project built with Angular. Handled Docker setup, managed GitHub repo, and configured Prometheus & Grafana for system monitoring and performance tracking.',
-    tech:['Angular','Docker','Prometheus','Grafana','GitHub'],
+    ico:'🏗️', num:'01',
+    name:'TerraSketch — AI-Powered Terraform Generator',
+    desc:'AI-powered platform that converts cloud architecture diagrams or text descriptions into Terraform code for AWS, Azure, and GCP. Implements an agentic workflow for architecture understanding, planning, generation, validation, and review — plus security analysis and cost estimation.',
+    tech:['Python','FastAPI','React','Vite','Terraform','LLMs','PostgreSQL','Docker'],
     ac:0, featured:true,
+    links:[{ l:'GitHub', href:'https://github.com/saip-coditation/TerraSketch' }],
   },
   {
-    ico:'📡', num:'02',
-    name:'Monitoring Stack Implementation',
-    desc:'Configured Prometheus & Grafana for application and system monitoring, improving visibility, alerting, and incident response efficiency across infrastructure.',
-    tech:['Prometheus','Grafana','Linux','Docker'],
+    ico:'🔐', num:'02',
+    name:'PVG Authentication & Enterprise Management System',
+    desc:'Authentication and authorization platform with JWT-based auth and RBAC. React/Vite frontend with a FastAPI + PostgreSQL backend, including user, role, module, and permission management.',
+    tech:['React','Vite','FastAPI','PostgreSQL','SQLAlchemy','JWT'],
     ac:1,
+    links:[{ l:'GitHub', href:'https://github.com/PhapaleSai/PVG_AUTH_Module_Repository' }],
   },
   {
-    ico:'🛒', num:'03',
-    name:'QuickPick — E-Commerce Website',
-    desc:'Responsive e-commerce site with product browsing, cart management and checkout. Mobile-friendly UX using browser local storage for state management.',
-    tech:['HTML','CSS','Bootstrap','JavaScript'],
+    ico:'💬', num:'03',
+    name:'DataBridge AI — POC Chat Interface',
+    desc:'AI-powered platform for interacting with business data through natural-language queries, integrating OpenAI, Stripe, and Zendesk APIs, with JWT auth, REST APIs, and query history.',
+    tech:['Django','Django REST Framework','JavaScript','OpenAI','Stripe API','Zendesk API'],
     ac:2,
+    links:[{ l:'GitHub', href:'https://github.com/saip-coditation/POC_chat_interface' }],
   },
   {
-    ico:'🔲', num:'04',
-    name:'QR Code Generator (Django)',
-    desc:'Django web app to generate and manage QR codes dynamically. Clean responsive interface for creating, displaying and downloading QR codes instantly.',
-    tech:['Django','Python','HTML','CSS'],
+    ico:'🤝', num:'04',
+    name:'AI Friend',
+    desc:'AI companion application with multiple AI personalities and conversational interactions, integrating Groq and Kokoro JS for AI and voice capabilities.',
+    tech:['Next.js','React','TypeScript','Groq','Kokoro JS','Tailwind CSS'],
     ac:3,
+    links:[{ l:'GitHub', href:'https://github.com/PhapaleSai/AI_friend_project' }],
+  },
+  {
+    ico:'💰', num:'05',
+    name:'Dhanapala — Expense Tracker',
+    desc:'Android application for tracking and managing personal expenses, built natively with Kotlin.',
+    tech:['Kotlin','Android','Gradle'],
+    ac:4,
+    links:[{ l:'GitHub', href:'https://github.com/PhapaleSai/dhanapala-expense-tracker' }],
+  },
+  {
+    ico:'🛒', num:'06',
+    name:'QuickPick — E-Commerce Website',
+    desc:'Responsive e-commerce website with product browsing, cart management, and checkout functionality.',
+    tech:['HTML','CSS','Bootstrap','JavaScript'],
+    ac:5,
   },
 ];
 
@@ -421,6 +452,15 @@ function Projects() {
             <div className="proj-tech">
               {p.tech.map(t => <span className="p-tag" key={t}>{t}</span>)}
             </div>
+            {p.links && (
+              <div className="proj-links">
+                {p.links.map(lk => (
+                  <a href={lk.href} className="proj-link" key={lk.l} target="_blank" rel="noreferrer">
+                    {lk.l === 'GitHub' ? '🐙' : '🔗'} {lk.l}
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -444,8 +484,8 @@ function Education() {
           <div className="edu-ico">🎓</div>
           <div className="edu-deg">M.Sc. Computer Science</div>
           <div className="edu-school">P.V.G College of Science, Pune</div>
-          <div className="edu-yr">2023 – Present</div>
-          <div className="edu-gpa">⭐ CGPA: 8.73</div>
+          <div className="edu-yr">2024 – 2026</div>
+          <div className="edu-gpa">⭐ CGPA: 8.90</div>
         </div>
         <div className="g-card edu-card reveal" style={{ '--reveal-delay': '.1s' }}>
           <div className="edu-ico">🏛️</div>
@@ -511,7 +551,7 @@ function Contact() {
               { ico:'📞', l:'Phone',    v:'+91 8432737272',             href:'tel:+918432737272' },
               { ico:'📍', l:'Location', v:'Pune, Maharashtra, India',   href:'#' },
               { ico:'💼', l:'LinkedIn', v:'Connect on LinkedIn',        href:'https://linkedin.com/in/sai-phapale' },
-              { ico:'🐙', l:'GitHub',   v:'Dev-Sai-Ops on GitHub',      href:'https://github.com/Dev-Sai-Ops' },
+              { ico:'🐙', l:'GitHub',   v:'PhapaleSai on GitHub',       href:'https://github.com/PhapaleSai' },
             ].map(lk => (
               <a href={lk.href} className="c-link" key={lk.l}
                 target={lk.href.startsWith('http') ? '_blank' : '_self'} rel="noreferrer">
@@ -561,7 +601,7 @@ function Footer() {
       <div className="soc-bar">
         {[
           ['💼','https://linkedin.com/in/sai-phapale','LinkedIn'],
-          ['🐙','https://github.com/Dev-Sai-Ops','GitHub'],
+          ['🐙','https://github.com/PhapaleSai','GitHub'],
           ['📧','mailto:saiphapale7272@gmail.com','Email'],
           ['📞','tel:+918432737272','Phone'],
         ].map(([ico, href, lbl]) => (

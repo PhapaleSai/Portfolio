@@ -1,12 +1,12 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Sai Rajesh Phapale | Full Stack & DevOps Engineer',
-  description: 'Personal portfolio of Sai Rajesh Phapale — Web Developer & DevOps Engineer skilled in Django, AWS, Docker, Kubernetes, and more. Based in Pune, India.',
-  keywords: 'Sai Phapale, DevOps, Web Developer, Django, AWS, Docker, Kubernetes, Portfolio, Pune',
+  title: 'Sai Rajesh Phapale | Associate Software Developer',
+  description: 'Personal portfolio of Sai Rajesh Phapale — Associate Software Developer skilled in Python, Django, FastAPI, AWS, and AI/LLM applications. Based in Pune, India.',
+  keywords: 'Sai Phapale, Python Developer, Backend Developer, Django, FastAPI, AWS, AI Agents, Portfolio, Pune',
   openGraph: {
     title: 'Sai Rajesh Phapale | Portfolio',
-    description: 'Full Stack Developer & DevOps Engineer from Pune, India.',
+    description: 'Associate Software Developer — Python, AWS, and AI-powered applications, from Pune, India.',
     type: 'website',
   },
 };
