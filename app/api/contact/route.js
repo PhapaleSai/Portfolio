@@ -47,7 +47,7 @@ export async function POST(request) {
     });
 
     await transporter.sendMail({
-      from: `"Sai Rajesh Phapale" <${gmailUser}>`,
+      from: `"Sai Phapale" <${gmailUser}>`,
       to: email,
       subject: `Thanks for reaching out, ${name}! 👋`,
       html: `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;border-radius:12px;overflow:hidden;border:1px solid #ddd;">
@@ -57,7 +57,7 @@ export async function POST(request) {
         <div style="padding:24px;background:#fff;">
           <p>Thanks for getting in touch! I've received your message and will reply within <strong>24 hours</strong>.</p>
           <p style="background:#f5f5f5;padding:16px;border-radius:8px;border-left:4px solid #6c63ff;"><em>${message.replace(/\n/g, '<br>')}</em></p>
-          <p>Best regards,<br/><strong>Sai Rajesh Phapale</strong><br/>Full Stack Developer & DevOps Engineer</p>
+          <p>Best regards,<br/><strong>Sai Phapale</strong><br/>Associate Software Developer</p>
         </div>
       </div>`,
     });

@@ -170,7 +170,7 @@ function HeroPhoto() {
         <div className="photo-tilt">
           <div className="photo-ring">
             <div className="photo-inner">
-              <Image src="/profile.jpg" alt="Sai Rajesh Phapale" width={320} height={320} priority />
+              <Image src="/profile.jpg" alt="Sai Phapale" width={320} height={320} priority />
               <div className="photo-shine" />
             </div>
           </div>
@@ -277,7 +277,7 @@ function Hero() {
           </div>
           <h1 className="hero-name">
             Hi, I&apos;m<br />
-            <span className="grad">Sai Rajesh<br />Phapale</span>
+            <span className="grad">Sai<br />Phapale</span>
           </h1>
           <p className="hero-role">
             <Typewriter words={['Associate Software Developer','Python Backend Developer','AWS Cloud Engineer','AI/LLM Application Builder']} />
@@ -289,6 +289,7 @@ function Hero() {
           <div className="hero-btns">
             <a href="#projects" className="btn-primary">View My Work ↓</a>
             <a href="#contact" className="btn-ghost">Get In Touch</a>
+            <a href="/Sai_Phapale_Resume.pdf" target="_blank" rel="noreferrer" className="btn-ghost">View Resume ↗</a>
           </div>
           <div className="hero-stats">
             {[
@@ -343,7 +344,7 @@ function About() {
             { ico:'📍', l:'Location',  v:'Pune, India' },
             { ico:'📧', l:'Email',     v:<a href="mailto:saiphapale7272@gmail.com">saiphapale7272@gmail.com</a> },
             { ico:'📞', l:'Phone',     v:'+91 8432737272' },
-            { ico:'🎓', l:'Education', v:'M.Sc Computer Science (Pursuing)' },
+            { ico:'🎓', l:'Education', v:'M.Sc Computer Science (2026)' },
             { ico:'💼', l:'Role',      v:'Associate Software Developer @ Coditation' },
             { ico:'🌐', l:'LinkedIn',  v:<a href="https://linkedin.com/in/sai-phapale" target="_blank" rel="noreferrer">linkedin.com/in/sai-phapale</a> },
             { ico:<IconGitHub className="info-icon" />, l:'GitHub', v:<a href="https://github.com/PhapaleSai" target="_blank" rel="noreferrer">github.com/PhapaleSai</a> },
@@ -561,7 +562,7 @@ function Education() {
       </div>
       <div className="edu-grid">
         <div onMouseMove={spotlightMove} className="g-card edu-card reveal">
-          <div className="edu-badge">Pursuing</div>
+          <div className="edu-badge">Completed</div>
           <div className="edu-ico">🎓</div>
           <div className="edu-deg">M.Sc. Computer Science</div>
           <div className="edu-school">P.V.G College of Science, Pune</div>
@@ -690,7 +691,7 @@ function Footer() {
             target={href.startsWith('http') ? '_blank' : '_self'} rel="noreferrer">{ico}</a>
         ))}
       </div>
-      <p>© {new Date().getFullYear()} <strong>Sai Rajesh Phapale</strong> · Built with Next.js · Hosted on Vercel</p>
+      <p>© {new Date().getFullYear()} <strong>Sai Phapale</strong> · Built with Next.js · Hosted on Vercel</p>
     </footer>
   );
 }
