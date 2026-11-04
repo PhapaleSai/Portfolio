@@ -562,7 +562,6 @@ function Education() {
       </div>
       <div className="edu-grid">
         <div onMouseMove={spotlightMove} className="g-card edu-card reveal">
-          <div className="edu-badge">Completed</div>
           <div className="edu-ico">🎓</div>
           <div className="edu-deg">M.Sc. Computer Science</div>
           <div className="edu-school">P.V.G College of Science, Pune</div>
